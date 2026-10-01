@@ -113,5 +113,35 @@ async def delete_recurso(item_id: int):
     raise HTTPException(status_code=404, detail="Recurso no encontrado")
 
 #____________________________________________________________________________________________________________________________________________
-#
+#DESARROLLO DE LOS ENDPOINTS DE CRUD DE USUARIOS
 #____________________________________________________________________________________________________________________________________________
+
+app = FastAPI(
+    title="Api Recursos y Usuarios",
+    description="Ejemplo de APIs con FastAPI, APIRouter personalizados, validacion con pydantic y base en memoria",
+    version="2.0.0"
+)
+@app.get("/", summary="Pasina de inicio de la API")
+async def root():
+    return{
+        "mensaje": "Bienvenido a la API de Recursos y Usuarios",
+        "version": "2.0.0",
+        "documentacion": "/docs",
+        "endpoints": {
+            "recursos": "/recursos",
+            "usuarios": "/usuarios"
+        }
+    }
+    
+app.include_router(recursos_router)
+app.include_router(usuarios_router)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "main:app",
+        host="127.0.0.1",
+        port=8000,
+        reload= True,
+        log_level="info"
+    )
