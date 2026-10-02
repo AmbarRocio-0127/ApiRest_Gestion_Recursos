@@ -104,8 +104,8 @@ Respuesta `201 Created`:
 |---|---|
 | Modelos de recursos y CRUD de recursos | Implementado |
 | Modelos de usuarios y router de usuarios | Definidos |
-| Endpoints de usuarios | Pendiente |
-| Instancia de la aplicación (`app = FastAPI(...)`) y registro de routers con `include_router` | Pendiente |
+| Endpoints de usuarios | Desarrollado |
+| Instancia de la aplicación (`app = FastAPI(...)`) y registro de routers con `include_router` | Implementado |
 
 ---
 
