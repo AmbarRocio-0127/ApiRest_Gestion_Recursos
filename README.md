@@ -134,12 +134,4 @@ FastAPI genera la documentación interactiva en `http://127.0.0.1:8000/docs` (Sw
 
 ---
 
-## Próximos pasos
-
-- Crear la instancia de la aplicación y registrar los routers.
-- Completar el CRUD de usuarios siguiendo la misma estructura que el de recursos.
-- Reemplazar el almacenamiento en memoria por una base de datos.
-
----
-
 Desarrollado por [Ámbar Rocío](https://github.com/AmbarRocio-0127) como práctica de backend con FastAPI.
